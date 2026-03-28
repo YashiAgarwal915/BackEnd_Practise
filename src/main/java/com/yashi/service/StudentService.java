@@ -27,7 +27,7 @@ public class StudentService {
     }
 
     public void updateStudents(Student s) throws Exception{
-        System.out.println("Updating id using name of student");
+        System.out.println("Updating name using id of student");
         dao.updateStudents(s);
         System.out.println("Student Updated");
     }

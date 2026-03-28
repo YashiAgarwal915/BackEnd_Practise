@@ -29,10 +29,10 @@ public void addStudent(Student s) throws Exception{
 
 public void updateStudents(Student s) throws Exception{
     PreparedStatement ps=con.prepareStatement(
-        "update students set id=? where name=?"
+        "update students set name where id=?"
     );
-    ps.setString(2,s.name);
-    ps.setInt(1,s.id);
+    ps.setString(1,s.name);
+    ps.setInt(2,s.id);
     ps.executeUpdate();
 }
 
