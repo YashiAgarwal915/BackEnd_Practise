@@ -80,3 +80,35 @@ create table Account(
     id int PRIMARY key,
     balance int
 );
+
+create table members(
+    id int primary key,
+    name VARCHAR(50),
+    age int
+);
+
+create table trainers(
+    id int primary key,
+    name varchar(50),
+    speciality varchar(50)
+);
+
+create table membership(
+    id int primary key,
+    member_id int,
+    trainer_id int,
+    fee int,
+    FOREIGN KEY(member_id) REFERENCES members(id),
+    FOREIGN key (trainer_id) REFERENCES trainers(id)
+);
+
+
+
+ALTER TABLE membership
+DROP CONSTRAINT membership_member_id_fkey;
+
+ALTER TABLE membership
+ADD CONSTRAINT membership_member_id_fkey
+FOREIGN KEY (member_id)
+REFERENCES members(id)
+ON DELETE CASCADE;

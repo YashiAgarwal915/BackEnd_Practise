@@ -30,7 +30,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.yashi.controller.MainApp</mainClass>
+                    <mainClass>com.yashi.controller.GymMainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
