@@ -5,11 +5,12 @@ import com.yashi.model.Student;
 
 public class StudentService {
     StudentDAO dao;
+    
 
     public StudentService() throws Exception {
         dao=new StudentDAO();
     }
-
+    
     public void registerStudent(Student s) throws Exception{
         if(s.name==null || s.name.isEmpty()){
             System.out.println("Invalid Name");
@@ -21,6 +22,7 @@ public class StudentService {
     }
 
     public void showStudents() throws Exception{
+        System.out.println("Checking...");
         for(Student s: dao.getAllStudents()){
             System.out.println(s.id+" "+s.name);
         }
