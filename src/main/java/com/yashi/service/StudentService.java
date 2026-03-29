@@ -29,7 +29,8 @@ public class StudentService {
     }
 
     public void updateStudents(Student s) throws Exception{
-        System.out.println("Updating name using id of student");
+        System.out.println("Api feature...1");
+        System.out.println("Api feature....2");
         dao.updateStudents(s);
         System.out.println("Student Updated");
     }
