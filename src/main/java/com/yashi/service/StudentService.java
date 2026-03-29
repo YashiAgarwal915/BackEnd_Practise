@@ -36,12 +36,13 @@ public class StudentService {
     }
 
     public void deleteStudentsById(Student s) throws Exception{
-        System.out.println("Testing PR");
+        System.out.println("Testing PR...1");
         dao.deleteStudentsById(s);
         System.out.println("Student Deleted by ID");
     }
 
     public void deleteStudentsByName(Student s) throws Exception{
+        System.out.println("Testing PR...1");
         dao.deleteStudentsByName(s);
         System.out.println("Student Deleted by Name");
     }
